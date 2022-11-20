@@ -121,6 +121,11 @@ public class PenentuJumlahHari extends javax.swing.JFrame {
         });
 
         hapusButton.setText("Hapus");
+        hapusButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hapusButtonActionPerformed(evt);
+            }
+        });
 
         simpanButton.setText("Simpan");
 
@@ -222,6 +227,13 @@ public class PenentuJumlahHari extends javax.swing.JFrame {
                     " tahun " + tahun + " adalah " + jumlahHari);
         }
     }//GEN-LAST:event_hitungButtonActionPerformed
+
+    private void hapusButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapusButtonActionPerformed
+        // TODO add your handling code here:
+        jumlahHariLabel.setText("");
+        tahunTextField.setText("");
+        bulanComboBox.setSelectedItem("Januari");
+    }//GEN-LAST:event_hapusButtonActionPerformed
 
     /**
      * @param args the command line arguments
