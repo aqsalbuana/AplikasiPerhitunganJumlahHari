@@ -36,10 +36,10 @@ public class PenentuJumlahHari extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jumlahHariLabel = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        hitungButton = new javax.swing.JButton();
+        hapusButton = new javax.swing.JButton();
+        simpanButton = new javax.swing.JButton();
+        keluarButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,9 +47,9 @@ public class PenentuJumlahHari extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 153, 102));
 
-        jLabel1.setText("jLabel1");
+        jLabel1.setText("Tahun");
 
-        jLabel2.setText("jLabel2");
+        jLabel2.setText("Bulan");
 
         tahunTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,9 +65,9 @@ public class PenentuJumlahHari extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
                 .addGap(35, 35, 35)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(tahunTextField)
@@ -111,13 +111,18 @@ public class PenentuJumlahHari extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(0, 153, 153));
 
-        jButton1.setText("jButton1");
+        hitungButton.setText("Hitung");
+        hitungButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hitungButtonActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("jButton1");
+        hapusButton.setText("Hapus");
 
-        jButton3.setText("jButton1");
+        simpanButton.setText("Simpan");
 
-        jButton4.setText("jButton1");
+        keluarButton.setText("Keluar");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -125,24 +130,24 @@ public class PenentuJumlahHari extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(34, 34, 34)
-                .addComponent(jButton1)
+                .addComponent(hitungButton)
                 .addGap(15, 15, 15)
-                .addComponent(jButton2)
+                .addComponent(hapusButton)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(simpanButton)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addComponent(keluarButton)
+                .addContainerGap(85, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
+                    .addComponent(hapusButton)
+                    .addComponent(hitungButton)
+                    .addComponent(simpanButton)
+                    .addComponent(keluarButton))
                 .addContainerGap(47, Short.MAX_VALUE))
         );
 
@@ -190,6 +195,10 @@ public class PenentuJumlahHari extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tahunTextFieldActionPerformed
 
+    private void hitungButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hitungButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hitungButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -227,10 +236,8 @@ public class PenentuJumlahHari extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> bulanComboBox;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton hapusButton;
+    private javax.swing.JButton hitungButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
@@ -238,6 +245,8 @@ public class PenentuJumlahHari extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel jumlahHariLabel;
+    private javax.swing.JButton keluarButton;
+    private javax.swing.JButton simpanButton;
     private javax.swing.JTextField tahunTextField;
     // End of variables declaration//GEN-END:variables
 }
