@@ -137,6 +137,11 @@ public class PenentuJumlahHari extends javax.swing.JFrame {
         });
 
         keluarButton.setText("Keluar");
+        keluarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                keluarButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -253,6 +258,14 @@ public class PenentuJumlahHari extends javax.swing.JFrame {
             System.err.println("Error: " + e.getMessage());
         }
     }//GEN-LAST:event_simpanButtonActionPerformed
+
+    private void keluarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keluarButtonActionPerformed
+        // TODO add your handling code here:
+        int c = JOptionPane.showConfirmDialog(null, "Yakin Ingin Keluar", "Konfirmasi", JOptionPane.YES_NO_OPTION);
+        if (c == JOptionPane.YES_OPTION){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_keluarButtonActionPerformed
 
     /**
      * @param args the command line arguments
