@@ -5,6 +5,8 @@
  */
 package gui;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author User
@@ -97,6 +99,16 @@ public class LoginForm extends javax.swing.JFrame {
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
+        if((userTF.getText().equals("admin")) && 
+                (String.valueOf(passwordTF.getPassword()).equals("admin"))){
+            new PenentuJumlahHari().setVisible(true);
+            dispose();
+        } else{
+            JOptionPane.showMessageDialog(null, userTF.getText() + "Password Anda Salah ", "Informasi", JOptionPane.ERROR_MESSAGE);
+            userTF.setText("");
+            passwordTF.setText("");
+            userTF.requestFocus();
+        }
     }//GEN-LAST:event_loginButtonActionPerformed
 
     /**
