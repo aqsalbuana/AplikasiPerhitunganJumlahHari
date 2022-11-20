@@ -5,6 +5,8 @@
  */
 package gui;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author User
@@ -197,6 +199,28 @@ public class PenentuJumlahHari extends javax.swing.JFrame {
 
     private void hitungButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hitungButtonActionPerformed
         // TODO add your handling code here:
+        if(tahunTextField.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Error: isian tahun kosong!",
+                "Error: isian tahun kosong!", JOptionPane.WARNING_MESSAGE);
+        }else{
+            int tahun = Integer.parseInt(tahunTextField.getText());
+            int jumlahHari;
+            if(bulanComboBox.getSelectedItem().equals("Februari")){
+                if(((tahun % 4 == 0) && !(tahun % 100 == 0)) || (tahun % 400 == 0))
+                    jumlahHari = 29;
+                else jumlahHari = 28;
+            }else if (bulanComboBox.getSelectedItem().equals("April") ||
+                    bulanComboBox.getSelectedItem().equals("Juni") ||
+                    bulanComboBox.getSelectedItem().equals("September") ||
+                    bulanComboBox.getSelectedItem().equals("November")){
+                    jumlahHari = 30;
+            }else{
+                jumlahHari = 31;
+            }
+            jumlahHariLabel.setText("JUmlah hari pada bulan " +
+                    bulanComboBox.getSelectedItem() +
+                    " tahun " + tahun + " adalah " + jumlahHari);
+        }
     }//GEN-LAST:event_hitungButtonActionPerformed
 
     /**
