@@ -39,7 +39,6 @@ public class LoginForm extends javax.swing.JFrame {
 
         jLabel2.setText("Password");
 
-        passwordTF.setText("jPasswordField1");
         passwordTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordTFActionPerformed(evt);
@@ -66,12 +65,12 @@ public class LoginForm extends javax.swing.JFrame {
                             .addComponent(jLabel2))
                         .addGap(61, 61, 61)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(passwordTF)
+                            .addComponent(passwordTF, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
                             .addComponent(userTF)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(92, 92, 92)
                         .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addContainerGap(136, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
