@@ -5,6 +5,8 @@
  */
 package gui;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import javax.swing.JOptionPane;
 
 /**
@@ -128,6 +130,11 @@ public class PenentuJumlahHari extends javax.swing.JFrame {
         });
 
         simpanButton.setText("Simpan");
+        simpanButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                simpanButtonActionPerformed(evt);
+            }
+        });
 
         keluarButton.setText("Keluar");
 
@@ -234,6 +241,18 @@ public class PenentuJumlahHari extends javax.swing.JFrame {
         tahunTextField.setText("");
         bulanComboBox.setSelectedItem("Januari");
     }//GEN-LAST:event_hapusButtonActionPerformed
+
+    private void simpanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simpanButtonActionPerformed
+        // TODO add your handling code here:
+        try {
+            BufferedWriter out = new BufferedWriter(new FileWriter("jumlahhari.txt"));
+            out.write(jumlahHariLabel.getText());
+            JOptionPane.showMessageDialog(null, "Berhasil Disimpan dalam File");
+            out.close();
+        } catch (Exception e) {
+            System.err.println("Error: " + e.getMessage());
+        }
+    }//GEN-LAST:event_simpanButtonActionPerformed
 
     /**
      * @param args the command line arguments
